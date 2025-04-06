@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+*{
+  margin: 0%;
+  padding:0%;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Tajawal', sans-serif;}
+  
+  
+  nav{
+    display: flex;
+    justify-content: space-between;
+  
+    align-items: center;
+    max-width: 1300px;
+  margin : 10 auto;  
+  height: 10vh;
+  }
+  nav.logo{
+    display: flex;
+    font-size:medium;
+    align-items: center;
+    color: #6e0aef;
+  }
+  nav .logo i{
+    color: #6e0aef;
+    padding: 0.75rem;
+  
+  } 
+  nav .nav.items {
+    display: flex;
+  list-style-type: none;
+    
+  } 
+  nav .nav.items .nav.items{
+    padding: 0rem;
+  }
+  nav .nav-link {
+    text-decoration: none;
+    color: #4a547a;
+    font-size: 1.4rem;
+  }
+  nav .nav-link:hover{
+    color: #0a6def;
+  }
+
+  .custom-form {
+    width: 300px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .custom-form label {
+    display: block;
+    font-size: 1.2rem;
+    color: #6e0aef;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  .custom-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .custom-form input:focus {
+    border-color: #6e0aef;
+  }
+  
+  .custom-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #593cd1;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .custom-form button:hover {
+    background-color: #00f2fe;
+    transform: scale(1.05);
+  }
+  
+  .Register a{
+    color: black;
+    font-size:larger;
+    text-decoration: none;
+  }
+  .footer {
+    margin-top: 20%;
+    background-color: #d4d4d4;
+    color: rgb(0, 0, 0); 
+    text-align: center; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Tajawal', sans-serif; 
+    font-size: 15px; 
+  
+  }
+  

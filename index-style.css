@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+*{
+  margin: 0%;
+  padding:0%;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Tajawal', sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  max-width: 1300px;
+margin : 10 auto;  
+height: 10vh;
+}
+nav.logo{
+  display: flex;
+  font-size:medium;
+  align-items: center;
+  color: #6e0aef;
+}
+nav .logo i{
+  color: #6e0aef;
+  padding: 0.75rem;
+
+} 
+nav .nav.items {
+  display: flex;
+list-style-type: none;
+  
+} 
+nav .nav.items .nav.items{
+  padding: 0rem;
+}
+nav .nav-link {
+  text-decoration: none;
+  color: #4a547a;
+  font-size: 1.4rem;
+}
+nav .nav-link:hover{
+  color: #0a6def;
+}
+
+
+/*hero section*/
+.hero{
+  background-color:#f8f7fc;
+}
+.hero-section{
+max-width: 1366px;
+height: 90vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0 auto;
+padding: 0 5rem;
+}
+.hero-section.content{
+  display: flex;
+  flex-direction: column;
+}
+.hero-section h4{
+  color: #6e0aef;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.hero-section.content h1{
+font-size: 2.6rem;
+margin-bottom: 1rem;
+}
+.hero-section p{
+  color: #3d3d3d;
+  font-size: 1.4rem;
+}
+.hero-section span{
+  color: #6e0aef;
+}
+.btn{
+width: 10rem;
+margin-top:3rem ;
+border-radius: 0.5rem;
+outline: none;
+border: none;
+padding: 0.75em 1.5rem; 
+background-color:#593cd1;
+}
+.btn:hover {
+  background-color: #00f2fe;
+  transform: scale(1.05);
+}
+.btn a{
+text-decoration:none ;
+color: #000000;
+font-size: 1.4rem;
+}
+.footer {
+  background-color: #d4d4d4;
+  color: rgb(0, 0, 0); 
+  text-align: center; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Tajawal', sans-serif; 
+  font-size: 15px; 
+}

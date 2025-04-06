@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <link rel="icon" href="img/لوجو1.png" type="logo"/>
+
+  <title>Login</title>
+</head>
+<body>
+
+  <nav>
+    <div class="logo"> 
+      <img src="img/icon.png" width="120" height="120"> 
+    </div>
+    <ul class="nav items"></ul>
+    <li class="nav items"><a href="index.html" class="nav-link">Home</a></li>
+    <li class="nav items"><a class="nav-link">Login</a></li>
+    <li class="nav items"><a href="register.html" class="nav-link">Register</a></li>
+    <li class="nav items"><a href="about.html" class="nav-link">About</a></li>
+    </nav>
+
+
+  <form class="custom-form" action="dashboard.html" method="get" onsubmit="loginUser(event)">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Email" required value=""><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+    <p>OR</p>
+    <div class="Register">
+      <a href="register.html">Register</a>
+    </div>
+  </form>
+  
+  <script>
+    async function loginUser(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect the form data
+        const formData = {
+            email: document.getElementById("email").value,
+            password: document.getElementById("password").value,
+        };
+
+        try {
+            // Send a POST request to the backend /login endpoint
+            const response = await fetch("http://localhost:5000/api/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+
+            if (response.status === 400) {
+                alert(data.msg); // Show an error message if credentials are incorrect
+            } else if (response.ok) {
+                alert("Login successful");
+                // Store token in localStorage to allow access to restricted pages
+                localStorage.setItem("token", data.token);
+                // Redirect to the restricted page
+                window.location.href = "dashboard.html";
+            } else {
+                throw new Error(data.msg || "Something went wrong");
+            }
+        } catch (err) {
+            console.error("Error:", err.message);
+            alert("An error occurred. Please try again.");
+        }
+    }
+</script>
+
+  <footer class="footer">
+    <div>
+      
+      <h3>جميع الحقوق محفوظة لتيم المنهج 2025</h3>
+    </div>
+    <div>
+      <a href="https://www.youtube.com/@Elmanhag"><img src="./icons/youtube.png" alt="" height="20" width="20"></a>
+       <a href="https://chat.whatsapp.com/GCvHmfdSStHKlMEnKygrnB"><img src="./icons/whatsapp.png" alt="" height="20" width="20"></a>
+       <a href="https://t.me/elmanhag_cis_bot"><img for src="./icons/telegram.png" alt="" height="20" width="20"></a>
+    </div>
+  </footer>
+  
+</body>
+</html>
+       
